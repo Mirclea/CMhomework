@@ -25,8 +25,8 @@ if __name__ == "__main__":
     ## 开启一组实验文件
     ### 每次希望修改参数，然后run新的实验的时候，只需要把下面的 ver改变，
     ## 然后 运行main.py
-    ver = 'v2'
-    vhp = boot_a_new_experiment(epversion=ver, mel_segm_len=128, tt_iters=1500, train_batchsize=12, start_lr=0.0001,
+    ver = 'v1'
+    vhp = boot_a_new_experiment(epversion=ver, mel_segm_len=128, tt_iters=2000, train_batchsize=12, start_lr=0.0001,
                                 )
     generate_pairs_scripts('np_data',  ## 指定所使用的特征数据文件夹。
                            vhp.ep_version_dir,  ## 指定表单保存路径

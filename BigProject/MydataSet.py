@@ -73,7 +73,7 @@ def generate_pairs_scripts(meldatadir_name, save_log_dir, hp: Create_Train_Hpara
     ## 获取全部梅尔谱数据集路径
     for meldatap in data_dir_p.rglob('*.npy'):
         mel_i_Len = np.load(str(meldatap)).shape[-1]  ## 加载第 i 条 melspec的长度
-        if hp.min_train_mellen <= mel_i_Len <= hp.max_train_mellen:
+        if hp.min_train_mellen <= mel_i_Len:
             src_data_paths_list.append(meldatap)  # 注意添加Path()对象
         ## src data paths list 保存了每条梅尔谱的 相对路径 的 Path（）对象
 

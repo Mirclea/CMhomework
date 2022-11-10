@@ -22,8 +22,8 @@ class Create_Train_Hparams():
         ################ dataset / loader  ###################################
         self.train_ratio = 0.9  ## 切分训练集、测试集的比例
         self.mel_seglen = 200  ###  训练时，谱被padding的长度
-        self.min_train_mellen = 30  ### 生成表单中，所含有的 pairs的最大melspec长度。
-        self.max_train_mellen = 400  ### 生成表单中，所含有的 pairs的最大melspec长度。
+        self.min_train_mellen = 50  ### 生成表单中，所含有的 pairs的最大melspec长度。
+        # self.max_train_mellen = 400  ### 生成表单中，所含有的 pairs的最大melspec长度。
         self.batchsize_train = 12  ## 训练的batchsize
         ################ model params ################################
 

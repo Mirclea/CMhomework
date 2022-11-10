@@ -118,10 +118,11 @@ class Trainer(object):
         return [b.to(self.device) for b in batch]
 
     def save_model(self, i):
-        pdict = {"model": self.model.state_dict(),
-                 }
         path = self.hp.model_savedir / "{:06}.pth".format(i)
-        torch.save(pdict, str(path))
+        # pdict = {"model": self.model.state_dict(),
+        #          }
+        # torch.save(pdict, str(path))
+        torch.save(self.model, str(path))
         print("---------------- model saved ------------------- ")
 
     def check_stop(self):
